@@ -1,3 +1,5 @@
+package Ingressos;
+
 import eventos.Evento;
 
 public abstract class Ingresso {

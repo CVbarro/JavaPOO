@@ -1,5 +1,5 @@
 package eventos;
-import TipoIngresso;
+import Ingressos.TipoIngresso;
 
 public class Exposicao extends Evento {
     private int faixaEtaria, duracaoEmDias;
@@ -31,11 +31,5 @@ public class Exposicao extends Evento {
     }
 
     @Override
-    public boolean isIngressoDisponivel(TipoIngresso tipo, int quantidade){
-
-    }
-    @Override
-    public double venderIngresso(TipoIngresso tipo, int quantidade){
-
-    }
+    
 }

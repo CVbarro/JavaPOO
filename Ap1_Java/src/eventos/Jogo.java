@@ -1,11 +1,11 @@
 package eventos;
-import TipoIngresso;
+import Ingressos.TipoIngresso;
 
 public class Jogo extends Evento{
     private String esporte, equipes;
     private double descontoTorcedor;
 
-    protected Jogo(String esporte, String equipes, double descontoTorcedor, tring nomeEvento, String data, String local, int ingressoInteira, int ingressoMeia, double precoCheio){
+    protected Jogo(String esporte, String equipes, double descontoTorcedor, String nomeEvento, String data, String local, int ingressoInteira, int ingressoMeia, double precoCheio){
         super(equipes, data, local, ingressoInteira, ingressoMeia, precoCheio);
         this.descontoTorcedor = descontoTorcedor;
         this.equipes = equipes;
@@ -29,15 +29,6 @@ public class Jogo extends Evento{
     }
     public void setEsporte(String esporte) {
         this.esporte = esporte;
-    }
-
-    @Override
-    public boolean isIngressoDisponivel(TipoIngresso tipo, int quantidade) {
-
-    }
-    @Override
-    public double venderIngresso(TipoIngresso tipo, int quantidade){
-
     }
 
 
