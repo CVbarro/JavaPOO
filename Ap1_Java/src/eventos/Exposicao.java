@@ -5,7 +5,7 @@ public class Exposicao extends Evento {
     private int faixaEtaria, duracaoEmDias;
     private boolean descontoSocial;
 
-    protected Exposicao(int faixaEtaria, int duracaoEmDias, boolean descontoSocial, tring nomeEvento, String data, String local, int ingressoInteira, int ingressoMeia, double precoCheio){
+    protected Exposicao(int faixaEtaria, int duracaoEmDias, boolean descontoSocial, String nomeEvento, String data, String local, int ingressoInteira, int ingressoMeia, double precoCheio){
         super(local, data, local, ingressoInteira, ingressoMeia, precoCheio);
         this.descontoSocial = descontoSocial;
         this.duracaoEmDias = duracaoEmDias;
@@ -30,6 +30,7 @@ public class Exposicao extends Evento {
         this.faixaEtaria = faixaEtaria;
     }
 
-    @Override
     
+
+
 }

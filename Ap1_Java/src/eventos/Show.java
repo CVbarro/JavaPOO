@@ -43,33 +43,9 @@ public class Show extends Evento {
 
 
     public String informacoesEvento() {
-        return toString() + "Show: " + getNomeEvento() + "\n" + "Artista: " + nomeArtista + "\nGênero: " + generoMusica;
+        return toString() + "Show: " + getNomeEvento()  + "\nArtista: " + getNomeArtista() + "\nGênero: " + getGeneroMusica();
     }
 
-    @Override
-    public boolean isIngressoDisponivel(TipoIngresso tipo, int quantidade) {
-        if (tipo == TipoIngresso.Inteira) {
-            return ingressosInteira >= quantidade;
-        } else if (tipo == TipoIngresso.Meia) {
-            return ingressosMeia >= quantidade;
-        } else {
-            return false;
-        }
-    }
-    @Override
-    public double venderIngresso(TipoIngresso tipo, int quantidade) {
-        if (isIngressoDisponivel(tipo, quantidade)) {
-            if (tipo == TipoIngresso.Inteira) {
-                ingressosInteira -= quantidade;
-                return precoCheio * quantidade;
-            } else if (tipo == TipoIngresso.Meia) {
-                ingressosMeia -= quantidade;
-                return (precoCheio / 2) * quantidade;
-            }
-        }
-        return 0;
-    }
-    @Override
     public int ingressoRestante(int quantidade) {
         if (quantidade > 0) {
             System.out.println("O restante de ingressos é " + quantidade);
